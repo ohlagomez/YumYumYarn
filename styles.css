@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+/* Navigation Design */
+
+/* Change the color of the navigation links on hover */
+
+
+.navbar {
+    padding: 0;
+    background-color: #333;
+    .nav-item {
+        position: relative;
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+            color: #ffc107;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #ffc107;
+            transition: width 0.3s ease-in-out;
+        }
+
+        &:hover:before {
+            width: 100%;
+        }
+
+        .nav-link {
+            padding-bottom: 0.5rem;
+        }
+    }
+}
+
+.navbar-nav span {
+    color: #fff;
+}
+
+.navbar-nav span:hover {
+    color: #bf9452;
+}
+.navbar-nav a:hover {
+    color: #bf9452;
+}
+
+.navbar-nav a {
+    color: #fff;
+    margin-right: 15px;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.icon-image {
+    animation: rotateIn 1s ease-in-out 1;
+    width: 20%;
+    height: auto;
+}
+
+/* Navigation end Design */
+
+.container {
+    padding: 0px;
+}
+
+/* Navigation Design */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes scaleIn {
+    from {
+      transform: scale(0.5);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes rotateIn {
+    from {
+      transform: rotate(-10deg);
+    }
+    to {
+      transform: rotate(0);
+    }
+  }
+  
+  @keyframes colorChange {
+    0% {
+      color: #ffc107;
+    }
+    50% {
+      color: #3498db;
+    }
+    100% {
+      color: #ffc107;
+    }
+  }
+
+.banner {
+    background-image: url('images/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: #f8f9fa;
+    padding: 200px 0 200px 0;
+    border-radius: 10px;
+}
+
+.banner-title {
+    animation: bounce 1s ease-in-out infinite, fadeIn 1s ease-in-out 1;
+    font-family: 'Playfair Display', serif;
+    color: white;
+    font-weight: bolder;
+    font-size: 4rem;
+}
+
+.banner-title span {
+    animation: bounce 1s ease-in-out infinite, fadeIn 1s ease-in-out 1;
+  }
+
+/* Navigation end Design */
+
+/* Design Section Styles */
+.design {
+    padding: 3rem 0;
+}
+
+.title {
+    margin-bottom: 2rem;
+}
+
+.design-img {
+    position: relative;
+    animation: scaleIn 1s ease-in-out;
+}
+
+.design-img img {
+    animation: scaleIn 1s ease-in-out 1;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.design-img span {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #fff;
+    font-size: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+}
+
+.design-title {
+    padding: 1rem;
+}
+
+/* Adjustments for responsiveness */
+@media (min-width: 768px) {
+    .container {
+        max-width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1170px;
+    }
+}
+
+/* Carousel Design */
+.carousel {
+    margin-top: 3rem;
+    .carousel-inner img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+
+    .carousel-inner .carousel-item img {
+        max-height: 500px;
+        margin: auto;
+    }
+}
+
+/* Carousel end design */
+
+h5 {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 200;
+}
+
+p1 {
+    color: #fff;
+    font-size: larger;
+    font-weight: 500;
+}
+
+/* Blog Design */
+.blog {
+    padding: 80px 0;
+}
+
+.blog .title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.blog .title h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.blog .title p {
+    font-size: 18px;
+    color: #666;
+}
+
+.blog-item {
+    animation: slideIn 1s ease-in-out;
+    margin-bottom: 40px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.blog-item:hover {
+    transform: scale(1.05);
+}
+
+.blog-img {
+    position: relative;
+}
+
+.blog-img img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.blog-text {
+    padding: 20px;
+    background-color: #fff;
+}
+
+.blog-text span {
+    display: block;
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.blog-text h2 {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #333;
+}
+
+.blog-text p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.blog-text a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: orange;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.blog-text a:hover {
+    background-color: orange;
+}
+
+/* Blog end Design */
+
+/* Social Links Design */
+.social-links {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.social-links a {
+    border: 2px solid #f2e30f;
+    color: #bf9452;
+    display: block;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    text-decoration: none;
+    margin: 0 0.3rem;
+    transition: all 0.5s ease;
+}
+
+.social-links a:hover {
+    background: orange;
+    color: #2c3e50;
+}
+
+/* Footer Design */
+.footer {
+    background-color: #333;
+    text-align: center;
+
+    span {
+        margin-top: 1rem;
+        display: block;
+        font-family: 'Playfair Display', serif;
+        letter-spacing: 2px;
+        color: #fff;
+    }
+
+    .text-light {
+        padding: 10px;
+        color: #fff;
+    }
+}
+
+/* Add your custom styles here */
+
+.recent-posts {
+    padding: 20px;
+}
+
+.title {
+    margin-bottom: 30px;
+}
+
+.genre-section {
+    margin-top: 20px;
+}
+
+.genre-title {
+    color: #007bff; /* Blue color for the title */
+    margin-bottom: 15px; /* Add space below the title */
+}
+
+.genre-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.genre-item {
+    background-color: #28a745; /* Green color for the genre items */
+    color: #fff; /* White text color */
+    border: 2px solid #218838; /* Add border */
+    border-radius: 10px; /* Add border radius for rounded corners */
+    overflow: hidden; /* Hide overflow to contain background image */
+    margin: 10px; /* Add space between items */
+    width: 150px; /* Set a fixed width for each item */
+    height: 150px; /* Set a fixed height for each item */
+    position: relative; /* Position relative for absolute positioning of text */
+    cursor: pointer; /* Add cursor pointer on hover */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Add smooth transitions */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.genre-item img {
+    width: 100%; /* Make the image fill the entire box */
+    height: 100%; /* Make the image fill the entire box */
+    object-fit: cover; /* Cover the box with the image */
+}
+
+.genre-item .genre-text {
+    font-size: 16px; /* Adjust the font size */
+    color: #ffcc00; /* Unique color for the genre text */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow */
+    text-align: center; /* Center the text */
+}
+
+.genre-item:hover {
+    background-color: #218838; /* Darker green color on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add larger box shadow on hover */
+    transform: scale(1.05); /* Add scale effect on hover */
+}
+
+/* Loading screen */
+
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(75, 73, 66);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
+  }
+
+  .loading-content {
+    text-align: center;
+  }
+
+  .spinner-border {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .loading-text {
+    margin-top: 10px;
+  }
+
+  .btn-custom {
+    background-color: goldenrod;
+    color: black;
+    font-weight: bolder;
+    font-size: large;
+    transition: background-color 0.3s ease;
+    margin: 8px;
+  }
+
+  .btn-custom:hover {
+    background-color: yellow;
+  }
